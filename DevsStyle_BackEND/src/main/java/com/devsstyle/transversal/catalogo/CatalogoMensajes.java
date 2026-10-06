@@ -24,4 +24,12 @@ public final class CatalogoMensajes {
 		public static final String USUARIO_ERROR_PROBLEMA_CANCELANDO_TRANSACCION_SQL = "Se ha presentado un problema tratando de deshacer los cambios de la operación deseada contra la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
 		public static final String USUARIO_ERROR_PROBLEMA_CERRANDO_CONEXION_SQL = "Se ha presentado un problema tratando de cerrar la conexión contra la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
 	}
+
+	public static final class PostgreSqlDAOFactory {
+
+		private PostgreSqlDAOFactory() {
+		}
+
+		public static final String USUARIO_ERROR_PROBLEMA_ABRIENDO_CONEXION_SQL = "Se ha presentado un problema tratando de abrir la conexión contra la fuente de información en la cual se iba a llevar a cabo la operación deseada. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+	}
 }
