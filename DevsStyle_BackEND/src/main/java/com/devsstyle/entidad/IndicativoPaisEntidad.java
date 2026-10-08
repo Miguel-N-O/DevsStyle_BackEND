@@ -16,6 +16,12 @@ public final class IndicativoPaisEntidad {
 		setPais(UtilTexto.VACIO);
 		setIndicativo(UtilTexto.VACIO);
 	}
+	
+	public IndicativoPaisEntidad(UUID id, String pais, String indicativo) {
+		setId(id);
+		setPais(pais);
+		setIndicativo(indicativo);
+	}
 
 	public UUID getId() {
 		return id;

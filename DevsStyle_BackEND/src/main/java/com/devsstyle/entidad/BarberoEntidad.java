@@ -35,6 +35,24 @@ public final class BarberoEntidad {
 		setNumeroVerificado(false);
 		setActivo(true);
 	}
+	
+	public BarberoEntidad(UUID id, TipoIdentificacionEntidad tipoIdentificacion, String numeroIdentificacion,
+			String primerNombre, String segundoNombre, String primerApellido, String segundoApellido,
+			IndicativoPaisEntidad indicativoPais, String numeroTelefono, String correoElectronico,
+			boolean numeroVerificado, boolean activo) {
+		setId(id);
+		setTipoIdentificacion(tipoIdentificacion);
+		setNumeroIdentificacion(numeroIdentificacion);
+		setPrimerNombre(primerNombre);
+		setSegundoNombre(segundoNombre);
+		setPrimerApellido(primerApellido);
+		setSegundoApellido(segundoApellido);
+		setIndicativoPais(indicativoPais);
+		setNumeroTelefono(numeroTelefono);
+		setCorreoElectronico(correoElectronico);
+		setNumeroVerificado(numeroVerificado);
+		setActivo(activo);
+	}
 
 	public UUID getId() {
 		return id;

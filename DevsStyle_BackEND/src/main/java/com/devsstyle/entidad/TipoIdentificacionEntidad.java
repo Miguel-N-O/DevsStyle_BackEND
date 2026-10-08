@@ -14,6 +14,12 @@ public final class TipoIdentificacionEntidad {
 		setNombre(UtilTexto.VACIO);
 		setDescripcion(UtilTexto.VACIO);
 	}
+	
+	public TipoIdentificacionEntidad(UUID id, String nombre, String descripcion) {
+		setId(id);
+		setNombre(nombre);
+		setDescripcion(descripcion);
+	}
 
 	public UUID getId() {
 		return id;
