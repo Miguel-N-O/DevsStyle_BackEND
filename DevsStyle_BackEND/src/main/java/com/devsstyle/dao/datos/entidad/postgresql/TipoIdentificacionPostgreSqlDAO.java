@@ -29,6 +29,9 @@ public final class TipoIdentificacionPostgreSqlDAO extends SqlDAO implements Tip
 
 	@Override
 	public TipoIdentificacionEntidad consultarPorId(UUID id) {
+		if (UtilUUID.obtenerUUIDDefecto().equals(UtilUUID.obtenerValorDefecto(id))) {
+			return new TipoIdentificacionEntidad();
+		}
 		var filtro = new TipoIdentificacionEntidad();
 		filtro.setId(id);
 		var tiposIdentificacion = consultarPorFiltro(filtro);

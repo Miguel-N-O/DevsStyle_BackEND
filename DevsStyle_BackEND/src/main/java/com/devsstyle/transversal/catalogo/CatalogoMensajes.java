@@ -52,5 +52,17 @@ public final class CatalogoMensajes {
 		public static final String USUARIO_ERROR_CONSULTANDO_INDICATIVOS_PAIS = "Se ha presentado un problema tratando de consultar los indicativos de país en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
 
 		}
+	
+	
+	public static final class BarberoPostgreSqlDAO {
+
+		private BarberoPostgreSqlDAO() {
+		}
+
+		public static final String USUARIO_ERROR_CONSULTANDO_BARBEROS = "Se ha presentado un problema tratando de consultar los barberos en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+		public static final String TECNICO_ERROR_CONSULTANDO_BARBEROS = "Se presentó una SQLException en BarberoPostgreSqlDAO.consultarPorFiltro al consultar la tabla Barbero: ";
+		public static final String USUARIO_ERROR_CREANDO_BARBERO = "Se ha presentado un problema tratando de registrar el barbero en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+		public static final String TECNICO_ERROR_CREANDO_BARBERO = "Se presentó una SQLException en BarberoPostgreSqlDAO.crear al insertar en la tabla Barbero: ";
+	}
 
 }

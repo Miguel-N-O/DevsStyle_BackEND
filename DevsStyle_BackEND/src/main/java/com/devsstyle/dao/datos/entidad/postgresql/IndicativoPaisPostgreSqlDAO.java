@@ -37,6 +37,9 @@ public final class IndicativoPaisPostgreSqlDAO extends SqlDAO implements Indicat
 
 	@Override
 	public IndicativoPaisEntidad consultarPorId(UUID id) {
+		if (UtilUUID.obtenerUUIDDefecto().equals(UtilUUID.obtenerValorDefecto(id))) {
+			return new IndicativoPaisEntidad();
+		}
 		var filtro = new IndicativoPaisEntidad();
 		filtro.setId(id);
 		var indicativosPais = consultarPorFiltro(filtro);
