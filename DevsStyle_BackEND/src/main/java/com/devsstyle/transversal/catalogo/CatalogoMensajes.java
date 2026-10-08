@@ -2,6 +2,8 @@ package com.devsstyle.transversal.catalogo;
 
 public final class CatalogoMensajes {
 
+
+
 	private CatalogoMensajes() {
 	}
 
@@ -41,4 +43,14 @@ public final class CatalogoMensajes {
 		public static final String USUARIO_ERROR_CONSULTANDO_TIPOS_IDENTIFICACION = "Se ha presentado un problema tratando de consultar los tipos de identificación en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
 		public static final String TECNICO_ERROR_CONSULTANDO_TIPOS_IDENTIFICACION = "Se presentó una SQLException en TipoIdentificacionPostgreSqlDAO.consultarPorFiltro al consultar la tabla TipoIdentificacion: ";
 	}
+	
+	public static final class IndicativoPaisPostgreSqlDAO {
+		private IndicativoPaisPostgreSqlDAO() {
+	}
+
+		public static final String TECNICO_ERROR_CONSULTANDO_INDICATIVOS_PAIS = "Se presentó una SQLException en IndicativoPaisPostgreSqlDAO.consultarPorFiltro al consultar la tabla IndicativoPais: ";
+		public static final String USUARIO_ERROR_CONSULTANDO_INDICATIVOS_PAIS = "Se ha presentado un problema tratando de consultar los indicativos de país en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+
+		}
+
 }
