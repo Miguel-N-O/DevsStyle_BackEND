@@ -65,4 +65,32 @@ public final class CatalogoMensajes {
 		public static final String TECNICO_ERROR_CREANDO_BARBERO = "Se presentó una SQLException en BarberoPostgreSqlDAO.crear al insertar en la tabla Barbero: ";
 	}
 
+	public static final class BarberoNegocioImpl {
+
+		private BarberoNegocioImpl() {
+		}
+
+		public static final String USUARIO_ERROR_NUMERO_IDENTIFICACION_OBLIGATORIO = "El número de identificación es obligatorio. Por favor ingréselo e intente de nuevo.";
+		public static final String USUARIO_ERROR_NUMERO_IDENTIFICACION_FORMATO_NO_VALIDO = "El número de identificación solo puede tener letras y dígitos, sin espacios ni símbolos. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_NUMERO_IDENTIFICACION_LONGITUD_NO_VALIDA = "El número de identificación debe tener entre 5 y 20 caracteres. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_TIPO_IDENTIFICACION_OBLIGATORIO = "El tipo de identificación es obligatorio. Por favor seleccione uno de la lista e intente de nuevo.";
+		public static final String USUARIO_ERROR_PRIMER_NOMBRE_OBLIGATORIO = "El primer nombre es obligatorio. Por favor ingréselo e intente de nuevo.";
+		public static final String USUARIO_ERROR_PRIMER_NOMBRE_FORMATO_NO_VALIDO = "El primer nombre solo puede tener letras, sin espacios, números ni símbolos. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_PRIMER_NOMBRE_LONGITUD_NO_VALIDA = "El primer nombre debe tener entre 2 y 30 letras. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_SEGUNDO_NOMBRE_FORMATO_NO_VALIDO = "El segundo nombre solo puede tener letras, sin espacios, números ni símbolos. Si no tiene segundo nombre, deje el campo vacío. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_SEGUNDO_NOMBRE_LONGITUD_NO_VALIDA = "El segundo nombre debe tener entre 2 y 30 letras. Si no tiene segundo nombre, deje el campo vacío. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_PRIMER_APELLIDO_OBLIGATORIO = "El primer apellido es obligatorio. Por favor ingréselo e intente de nuevo.";
+		public static final String USUARIO_ERROR_PRIMER_APELLIDO_FORMATO_NO_VALIDO = "El primer apellido solo puede tener letras, sin espacios, números ni símbolos. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_PRIMER_APELLIDO_LONGITUD_NO_VALIDA = "El primer apellido debe tener entre 2 y 30 letras. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_SEGUNDO_APELLIDO_FORMATO_NO_VALIDO = "El segundo apellido solo puede tener letras, sin espacios, números ni símbolos. Si no tiene segundo apellido, deje el campo vacío. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_SEGUNDO_APELLIDO_LONGITUD_NO_VALIDA = "El segundo apellido debe tener entre 2 y 30 letras. Si no tiene segundo apellido, deje el campo vacío. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_INDICATIVO_PAIS_OBLIGATORIO = "El indicativo de país es obligatorio. Por favor seleccione uno de la lista e intente de nuevo.";
+		public static final String USUARIO_ERROR_NUMERO_TELEFONO_OBLIGATORIO = "El número de teléfono es obligatorio. Por favor ingréselo e intente de nuevo.";
+		public static final String USUARIO_ERROR_NUMERO_TELEFONO_FORMATO_NO_VALIDO = "El número de teléfono solo puede tener dígitos, sin el indicativo, espacios ni símbolos. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_NUMERO_TELEFONO_LONGITUD_NO_VALIDA = "El número de teléfono debe tener entre 7 y 14 dígitos. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_CORREO_ELECTRONICO_OBLIGATORIO = "El correo electrónico es obligatorio. Por favor ingréselo e intente de nuevo.";
+		public static final String USUARIO_ERROR_CORREO_ELECTRONICO_FORMATO_NO_VALIDO = "El correo electrónico no tiene un formato válido; debe ser como nombre@dominio.com. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_CORREO_ELECTRONICO_LONGITUD_NO_VALIDA = "El correo electrónico debe tener entre 6 y 100 caracteres. Por favor corríjalo e intente de nuevo.";
+	}
+
 }

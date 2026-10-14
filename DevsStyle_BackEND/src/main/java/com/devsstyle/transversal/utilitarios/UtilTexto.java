@@ -5,6 +5,10 @@ public final class UtilTexto {
 	private static UtilTexto instancia;
 	public static final String VACIO = "";
 	public static final String SOLO_LETRAS_ESPACIOS = "^[a-zA-Z ñÑáÁéÉíÍóÓúÚüÜ]*$";
+	public static final String LETRAS_DIGITOS = "^[a-zA-Z0-9]*$";
+	public static final String SOLO_LETRAS = "^[a-zA-ZñÑáÁéÉíÍóÓúÚüÜ]*$";
+	public static final String SOLO_DIGITOS = "^[0-9]*$";
+	public static final String CORREO = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
 
 	private UtilTexto() {
 	}
