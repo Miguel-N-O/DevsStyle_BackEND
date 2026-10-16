@@ -91,6 +91,8 @@ public final class CatalogoMensajes {
 		public static final String USUARIO_ERROR_CORREO_ELECTRONICO_OBLIGATORIO = "El correo electrónico es obligatorio. Por favor ingréselo e intente de nuevo.";
 		public static final String USUARIO_ERROR_CORREO_ELECTRONICO_FORMATO_NO_VALIDO = "El correo electrónico no tiene un formato válido; debe ser como nombre@dominio.com. Por favor corríjalo e intente de nuevo.";
 		public static final String USUARIO_ERROR_CORREO_ELECTRONICO_LONGITUD_NO_VALIDA = "El correo electrónico debe tener entre 6 y 100 caracteres. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_TIPO_IDENTIFICACION_NO_EXISTE = "No fue posible registrar el barbero porque el tipo de identificación seleccionado no existe. Por favor seleccione un tipo de identificación de la lista e intente de nuevo.";
+		public static final String USUARIO_ERROR_NUMERO_IDENTIFICACION_NO_CORRESPONDE_AL_TIPO = "El número de identificación solo puede tener dígitos para el tipo de identificación escogido. Solo el pasaporte admite letras. Por favor corríjalo e intente de nuevo.";
 	}
 
 }
