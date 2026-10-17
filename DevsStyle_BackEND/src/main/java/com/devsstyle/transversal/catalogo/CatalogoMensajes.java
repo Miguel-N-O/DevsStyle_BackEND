@@ -95,6 +95,9 @@ public final class CatalogoMensajes {
 		public static final String USUARIO_ERROR_NUMERO_IDENTIFICACION_NO_CORRESPONDE_AL_TIPO = "El número de identificación solo puede tener dígitos para el tipo de identificación escogido. Solo el pasaporte admite letras. Por favor corríjalo e intente de nuevo.";
 		public static final String USUARIO_ERROR_INDICATIVO_PAIS_NO_EXISTE = "No fue posible registrar el barbero porque el indicativo de país seleccionado no existe. Por favor seleccione un indicativo de la lista e intente de nuevo.";
 		public static final String USUARIO_ERROR_NUMERO_TELEFONO_DEMASIADO_LARGO_PARA_INDICATIVO = "No fue posible registrar el barbero porque el número de teléfono es demasiado largo para el indicativo escogido: entre los dos no pueden pasar de 15 dígitos. Por favor revise el número e intente de nuevo.";
+		public static final String USUARIO_ERROR_IDENTIFICACION_YA_EXISTE = "No fue posible registrar el barbero porque ya existe otro barbero con el mismo tipo y número de identificación. Por favor verifique la identificación e intente de nuevo.";
+		public static final String USUARIO_ERROR_TELEFONO_YA_EXISTE = "No fue posible registrar el barbero porque ya existe otro barbero con el mismo indicativo y número de teléfono. Por favor use otro número e intente de nuevo.";
+		public static final String USUARIO_ERROR_CORREO_ELECTRONICO_YA_EXISTE = "No fue posible registrar el barbero porque ya existe otro barbero con el mismo correo electrónico. Por favor use otro correo e intente de nuevo.";
 	}
 
 }
