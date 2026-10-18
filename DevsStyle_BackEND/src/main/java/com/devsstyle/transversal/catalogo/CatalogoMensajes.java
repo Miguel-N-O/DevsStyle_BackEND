@@ -42,6 +42,12 @@ public final class CatalogoMensajes {
 
 		public static final String USUARIO_ERROR_CONSULTANDO_TIPOS_IDENTIFICACION = "Se ha presentado un problema tratando de consultar los tipos de identificación en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
 		public static final String TECNICO_ERROR_CONSULTANDO_TIPOS_IDENTIFICACION = "Se presentó una SQLException en TipoIdentificacionPostgreSqlDAO.consultarPorFiltro al consultar la tabla TipoIdentificacion: ";
+		public static final String USUARIO_ERROR_CREANDO_TIPO_IDENTIFICACION = "Se ha presentado un problema tratando de registrar el tipo de identificación en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+		public static final String TECNICO_ERROR_CREANDO_TIPO_IDENTIFICACION = "Se presentó una SQLException en TipoIdentificacionPostgreSqlDAO.crear al insertar en la tabla TipoIdentificacion: ";
+		public static final String USUARIO_ERROR_ACTUALIZANDO_TIPO_IDENTIFICACION = "Se ha presentado un problema tratando de actualizar el tipo de identificación en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+		public static final String TECNICO_ERROR_ACTUALIZANDO_TIPO_IDENTIFICACION = "Se presentó una SQLException en TipoIdentificacionPostgreSqlDAO.actualizar al actualizar la tabla TipoIdentificacion: ";
+		public static final String USUARIO_ERROR_ELIMINANDO_TIPO_IDENTIFICACION = "Se ha presentado un problema tratando de eliminar el tipo de identificación en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+		public static final String TECNICO_ERROR_ELIMINANDO_TIPO_IDENTIFICACION = "Se presentó una SQLException en TipoIdentificacionPostgreSqlDAO.eliminar al eliminar de la tabla TipoIdentificacion: ";
 	}
 	
 	public static final class IndicativoPaisPostgreSqlDAO {
@@ -50,6 +56,12 @@ public final class CatalogoMensajes {
 
 		public static final String TECNICO_ERROR_CONSULTANDO_INDICATIVOS_PAIS = "Se presentó una SQLException en IndicativoPaisPostgreSqlDAO.consultarPorFiltro al consultar la tabla IndicativoPais: ";
 		public static final String USUARIO_ERROR_CONSULTANDO_INDICATIVOS_PAIS = "Se ha presentado un problema tratando de consultar los indicativos de país en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+		public static final String USUARIO_ERROR_CREANDO_INDICATIVO_PAIS = "Se ha presentado un problema tratando de registrar el indicativo de país en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+		public static final String TECNICO_ERROR_CREANDO_INDICATIVO_PAIS = "Se presentó una SQLException en IndicativoPaisPostgreSqlDAO.crear al insertar en la tabla IndicativoPais: ";
+		public static final String USUARIO_ERROR_ACTUALIZANDO_INDICATIVO_PAIS = "Se ha presentado un problema tratando de actualizar el indicativo de país en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+		public static final String TECNICO_ERROR_ACTUALIZANDO_INDICATIVO_PAIS = "Se presentó una SQLException en IndicativoPaisPostgreSqlDAO.actualizar al actualizar la tabla IndicativoPais: ";
+		public static final String USUARIO_ERROR_ELIMINANDO_INDICATIVO_PAIS = "Se ha presentado un problema tratando de eliminar el indicativo de país en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+		public static final String TECNICO_ERROR_ELIMINANDO_INDICATIVO_PAIS = "Se presentó una SQLException en IndicativoPaisPostgreSqlDAO.eliminar al eliminar de la tabla IndicativoPais: ";
 
 		}
 	
@@ -63,6 +75,10 @@ public final class CatalogoMensajes {
 		public static final String TECNICO_ERROR_CONSULTANDO_BARBEROS = "Se presentó una SQLException en BarberoPostgreSqlDAO.consultarPorFiltro al consultar la tabla Barbero: ";
 		public static final String USUARIO_ERROR_CREANDO_BARBERO = "Se ha presentado un problema tratando de registrar el barbero en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
 		public static final String TECNICO_ERROR_CREANDO_BARBERO = "Se presentó una SQLException en BarberoPostgreSqlDAO.crear al insertar en la tabla Barbero: ";
+		public static final String USUARIO_ERROR_ACTUALIZANDO_BARBERO = "Se ha presentado un problema tratando de actualizar el barbero en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+		public static final String TECNICO_ERROR_ACTUALIZANDO_BARBERO = "Se presentó una SQLException en BarberoPostgreSqlDAO.actualizar al actualizar la tabla Barbero: ";
+		public static final String USUARIO_ERROR_ELIMINANDO_BARBERO = "Se ha presentado un problema tratando de eliminar el barbero en la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+		public static final String TECNICO_ERROR_ELIMINANDO_BARBERO = "Se presentó una SQLException en BarberoPostgreSqlDAO.eliminar al eliminar de la tabla Barbero: ";
 	}
 
 	public static final class BarberoNegocioImpl {
