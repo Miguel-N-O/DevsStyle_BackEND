@@ -27,6 +27,14 @@ public final class CatalogoMensajes {
 		public static final String USUARIO_ERROR_PROBLEMA_CERRANDO_CONEXION_SQL = "Se ha presentado un problema tratando de cerrar la conexión contra la fuente de información. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
 	}
 
+	public static final class DAOFactory {
+
+		private DAOFactory() {
+		}
+
+		public static final String USUARIO_ERROR_FUENTE_INFORMACION_NO_HABILITADA = "La fuente de información que se solicitó para llevar a cabo la operación deseada no está habilitada. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+	}
+
 	public static final class PostgreSqlDAOFactory {
 
 		private PostgreSqlDAOFactory() {
@@ -116,4 +124,11 @@ public final class CatalogoMensajes {
 		public static final String USUARIO_ERROR_CORREO_ELECTRONICO_YA_EXISTE = "No fue posible registrar el barbero porque ya existe otro barbero con el mismo correo electrónico. Por favor use otro correo e intente de nuevo.";
 	}
 
+	public static final class BarberoFachadaImpl {
+
+		private BarberoFachadaImpl() {
+		}
+
+		public static final String USUARIO_ERROR_PROBLEMA_NO_CONTROLADO_REGISTRANDO_BARBERO = "Se ha presentado un problema NO CONTROLADO tratando de registrar el barbero deseado. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+	}
 }
