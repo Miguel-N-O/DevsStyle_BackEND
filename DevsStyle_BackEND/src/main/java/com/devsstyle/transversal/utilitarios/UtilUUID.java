@@ -13,6 +13,10 @@ public final class UtilUUID {
 		return UUID.randomUUID();
 	}
 
+	public static String generarComoTexto() {
+		return generar().toString().toLowerCase();
+	}
+
 	public static UUID convertirAUUID(final String uuidTexto) {
 		return UUID.fromString(obtenerValorDefectoComoTexto(uuidTexto));
 	}
