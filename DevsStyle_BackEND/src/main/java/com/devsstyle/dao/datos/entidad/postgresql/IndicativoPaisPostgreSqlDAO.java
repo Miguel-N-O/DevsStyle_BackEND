@@ -66,20 +66,22 @@ public final class IndicativoPaisPostgreSqlDAO extends SqlDAO implements Indicat
 		var sentenciaSql = new StringBuilder();
 		sentenciaSql.append("SELECT id, pais, indicativo ");
 		sentenciaSql.append("FROM IndicativoPais ");
-		sentenciaSql.append("WHERE 1 = 1 ");
 
 		if (!UtilUUID.obtenerUUIDDefecto().equals(filtroTmp.getId())) {
-			sentenciaSql.append("AND id = ? ");
+			sentenciaSql.append(parametros.isEmpty() ? "WHERE " : "AND ");
+			sentenciaSql.append("id = ? ");
 			parametros.add(filtroTmp.getId());
 		}
 
 		if (!UtilTexto.getUtilTexto().esVacia(filtroTmp.getPais())) {
-			sentenciaSql.append("AND pais = ? ");
+			sentenciaSql.append(parametros.isEmpty() ? "WHERE " : "AND ");
+			sentenciaSql.append("pais = ? ");
 			parametros.add(filtroTmp.getPais());
 		}
 
 		if (!UtilTexto.getUtilTexto().esVacia(filtroTmp.getIndicativo())) {
-			sentenciaSql.append("AND indicativo = ? ");
+			sentenciaSql.append(parametros.isEmpty() ? "WHERE " : "AND ");
+			sentenciaSql.append("indicativo = ? ");
 			parametros.add(filtroTmp.getIndicativo());
 		}
 

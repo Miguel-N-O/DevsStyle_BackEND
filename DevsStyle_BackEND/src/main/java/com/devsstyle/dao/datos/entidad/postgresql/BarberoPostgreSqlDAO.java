@@ -79,35 +79,40 @@ public final class BarberoPostgreSqlDAO extends SqlDAO implements BarberoDAO {
 		sentenciaSql.append("segundo_nombre, primer_apellido, segundo_apellido, indicativo_pais_id, ");
 		sentenciaSql.append("numero_telefono, correo_electronico, numero_verificado, activo ");
 		sentenciaSql.append("FROM Barbero ");
-		sentenciaSql.append("WHERE 1 = 1 ");
 
 		if (!UtilUUID.obtenerUUIDDefecto().equals(filtroTmp.getId())) {
-			sentenciaSql.append("AND id = ? ");
+			sentenciaSql.append(parametros.isEmpty() ? "WHERE " : "AND ");
+			sentenciaSql.append("id = ? ");
 			parametros.add(filtroTmp.getId());
 		}
 
 		if (!UtilUUID.obtenerUUIDDefecto().equals(filtroTmp.getTipoIdentificacion().getId())) {
-			sentenciaSql.append("AND tipo_identificacion_id = ? ");
+			sentenciaSql.append(parametros.isEmpty() ? "WHERE " : "AND ");
+			sentenciaSql.append("tipo_identificacion_id = ? ");
 			parametros.add(filtroTmp.getTipoIdentificacion().getId());
 		}
 
 		if (!UtilTexto.getUtilTexto().esVacia(filtroTmp.getNumeroIdentificacion())) {
-			sentenciaSql.append("AND numero_identificacion = ? ");
+			sentenciaSql.append(parametros.isEmpty() ? "WHERE " : "AND ");
+			sentenciaSql.append("numero_identificacion = ? ");
 			parametros.add(filtroTmp.getNumeroIdentificacion());
 		}
 
 		if (!UtilUUID.obtenerUUIDDefecto().equals(filtroTmp.getIndicativoPais().getId())) {
-			sentenciaSql.append("AND indicativo_pais_id = ? ");
+			sentenciaSql.append(parametros.isEmpty() ? "WHERE " : "AND ");
+			sentenciaSql.append("indicativo_pais_id = ? ");
 			parametros.add(filtroTmp.getIndicativoPais().getId());
 		}
 
 		if (!UtilTexto.getUtilTexto().esVacia(filtroTmp.getNumeroTelefono())) {
-			sentenciaSql.append("AND numero_telefono = ? ");
+			sentenciaSql.append(parametros.isEmpty() ? "WHERE " : "AND ");
+			sentenciaSql.append("numero_telefono = ? ");
 			parametros.add(filtroTmp.getNumeroTelefono());
 		}
 
 		if (!UtilTexto.getUtilTexto().esVacia(filtroTmp.getCorreoElectronico())) {
-			sentenciaSql.append("AND correo_electronico = ? ");
+			sentenciaSql.append(parametros.isEmpty() ? "WHERE " : "AND ");
+			sentenciaSql.append("correo_electronico = ? ");
 			parametros.add(filtroTmp.getCorreoElectronico());
 		}
 

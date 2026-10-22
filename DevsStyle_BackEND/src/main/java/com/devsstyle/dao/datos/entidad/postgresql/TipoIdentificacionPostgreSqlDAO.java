@@ -66,15 +66,16 @@ public final class TipoIdentificacionPostgreSqlDAO extends SqlDAO implements Tip
 		var sentenciaSql = new StringBuilder();
 		sentenciaSql.append("SELECT id, nombre, descripcion ");
 		sentenciaSql.append("FROM TipoIdentificacion ");
-		sentenciaSql.append("WHERE 1 = 1 ");
 
 		if (!UtilUUID.obtenerUUIDDefecto().equals(filtroTmp.getId())) {
-			sentenciaSql.append("AND id = ? ");
+			sentenciaSql.append(parametros.isEmpty() ? "WHERE " : "AND ");
+			sentenciaSql.append("id = ? ");
 			parametros.add(filtroTmp.getId());
 		}
 
 		if (!UtilTexto.getUtilTexto().esVacia(filtroTmp.getNombre())) {
-			sentenciaSql.append("AND nombre = ? ");
+			sentenciaSql.append(parametros.isEmpty() ? "WHERE " : "AND ");
+			sentenciaSql.append("nombre = ? ");
 			parametros.add(filtroTmp.getNombre());
 		}
 
