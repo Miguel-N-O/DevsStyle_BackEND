@@ -9,6 +9,7 @@ public final class UtilTexto {
 	public static final String SOLO_LETRAS = "^[a-zA-ZñÑáÁéÉíÍóÓúÚüÜ]*$";
 	public static final String SOLO_DIGITOS = "^[0-9]*$";
 	public static final String CORREO = "^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$";
+	public static final String INDICATIVO_PAIS = "^\\+[0-9]{1,4}$";
 
 	private UtilTexto() {
 	}
@@ -47,6 +48,14 @@ public final class UtilTexto {
 
 	public String quitarEspacioEnBlanco(String valor) {
 		return obtenerValorDefecto(valor).trim();
+	}
+
+	public String aplicarMayusculaInicial(String valor) {
+		var texto = quitarEspacioEnBlanco(valor);
+		if (esVacia(texto)) {
+			return texto;
+		}
+		return texto.substring(0, 1).toUpperCase() + texto.substring(1).toLowerCase();
 	}
 
 	public int obtenerLongitudCadena(String valor) {

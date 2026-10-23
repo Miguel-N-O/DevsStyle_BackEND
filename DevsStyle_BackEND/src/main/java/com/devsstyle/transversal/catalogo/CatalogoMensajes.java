@@ -124,6 +124,42 @@ public final class CatalogoMensajes {
 		public static final String USUARIO_ERROR_CORREO_ELECTRONICO_YA_EXISTE = "No fue posible registrar el barbero porque ya existe otro barbero con el mismo correo electrónico. Por favor use otro correo e intente de nuevo.";
 	}
 
+	public static final class TipoIdentificacionNegocioImpl {
+
+		private TipoIdentificacionNegocioImpl() {
+		}
+
+		public static final String USUARIO_ERROR_FILTRO_NOMBRE_FORMATO_NO_VALIDO = "El nombre del tipo de identificación por el que desea filtrar solo puede tener letras, sin espacios, números ni símbolos. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_FILTRO_NOMBRE_LONGITUD_NO_VALIDA = "El nombre del tipo de identificación por el que desea filtrar debe tener entre 2 y 5 letras. Por favor corríjalo e intente de nuevo.";
+	}
+
+	public static final class IndicativoPaisNegocioImpl {
+
+		private IndicativoPaisNegocioImpl() {
+		}
+
+		public static final String USUARIO_ERROR_FILTRO_PAIS_FORMATO_NO_VALIDO = "El país por el que desea filtrar solo puede tener letras y espacios, sin números ni símbolos. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_FILTRO_PAIS_LONGITUD_NO_VALIDA = "El país por el que desea filtrar debe tener entre 3 y 50 caracteres. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_FILTRO_INDICATIVO_FORMATO_NO_VALIDO = "El indicativo por el que desea filtrar debe empezar con + seguido de 1 a 4 dígitos, como +57. Por favor corríjalo e intente de nuevo.";
+		public static final String USUARIO_ERROR_FILTRO_INDICATIVO_LONGITUD_NO_VALIDA = "El indicativo por el que desea filtrar debe tener entre 2 y 5 caracteres. Por favor corríjalo e intente de nuevo.";
+	}
+
+	public static final class TipoIdentificacionFachadaImpl {
+
+		private TipoIdentificacionFachadaImpl() {
+		}
+
+		public static final String USUARIO_ERROR_PROBLEMA_NO_CONTROLADO_CONSULTANDO_TIPOS_IDENTIFICACION = "Se ha presentado un problema NO CONTROLADO tratando de consultar los tipos de identificación. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+	}
+
+	public static final class IndicativoPaisFachadaImpl {
+
+		private IndicativoPaisFachadaImpl() {
+		}
+
+		public static final String USUARIO_ERROR_PROBLEMA_NO_CONTROLADO_CONSULTANDO_INDICATIVOS_PAIS = "Se ha presentado un problema NO CONTROLADO tratando de consultar los indicativos de país. Por favor intente de nuevo y si el problema persiste contacte al administrador de la aplicación y reporte la novedad...";
+	}
+
 	public static final class BarberoFachadaImpl {
 
 		private BarberoFachadaImpl() {
