@@ -16,6 +16,7 @@
 	import com.devsstyle.negocio.negocio.reglas.impl.barbero.AsegurarTelefonoBarberoNoExistaRegla;
 	import com.devsstyle.negocio.negocio.reglas.impl.barbero.AsegurarTipoIdentificacionExistaRegla;
 	import com.devsstyle.negocio.negocio.reglas.impl.barbero.ValidarDatosRegistrarBarberoRegla;
+	import com.devsstyle.transversal.utilitarios.UtilTexto;
 	import com.devsstyle.transversal.utilitarios.UtilUUID;
 	
 	public final class BarberoNegocioImpl implements BarberoNegocio {
@@ -48,6 +49,10 @@
 			barberoEntidad.setId(generarIdDeBarberoUnico());
 			barberoEntidad.setNumeroIdentificacion(numeroIdentificacion);
 			barberoEntidad.setCorreoElectronico(correoElectronico);
+			barberoEntidad.setPrimerNombre(UtilTexto.getUtilTexto().aplicarMayusculaInicial(datos.getPrimerNombre()));
+			barberoEntidad.setSegundoNombre(UtilTexto.getUtilTexto().aplicarMayusculaInicial(datos.getSegundoNombre()));
+			barberoEntidad.setPrimerApellido(UtilTexto.getUtilTexto().aplicarMayusculaInicial(datos.getPrimerApellido()));
+			barberoEntidad.setSegundoApellido(UtilTexto.getUtilTexto().aplicarMayusculaInicial(datos.getSegundoApellido()));
 			barberoEntidad.setNumeroVerificado(false);
 			barberoEntidad.setActivo(true);
 	
