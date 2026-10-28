@@ -186,5 +186,6 @@ public final class CatalogoMensajes {
 		}
 
 		public static final String BARBERO_REGISTRADO_EXITOSAMENTE = "El barbero se registró de forma exitosa.";
+		public static final String SESION_INICIADA = "Hola %s. Ha iniciado sesión con el correo %s.";
 	}
 }
