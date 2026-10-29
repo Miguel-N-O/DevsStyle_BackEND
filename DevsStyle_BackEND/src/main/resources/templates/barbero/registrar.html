@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="_csrf" th:content="${_csrf.token}">
+	<meta name="_csrf_header" th:content="${_csrf.headerName}">
+	<title>Registrar barbero | devv_style</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<link th:href="@{/css/estilos.css}" href="/css/estilos.css" rel="stylesheet">
+</head>
+<body>
+	<header class="bg-devv">
+		<nav class="navbar navbar-dark container">
+			<a class="navbar-brand marca-devv fs-4" th:href="@{/barberos/registrar}" href="/barberos/registrar">devv_style</a>
+			<div class="d-flex align-items-center gap-4">
+				<a class="nav-link text-white fw-semibold border-bottom border-2 border-white" th:href="@{/barberos/registrar}" href="/barberos/registrar">Barberos</a>
+				<span class="text-devv-suave" th:text="${nombreUsuario}">Administrador</span>
+				<form th:action="@{/logout}" action="/logout" method="post" class="m-0">
+					<button type="submit" class="btn btn-outline-light btn-sm">Cerrar sesión</button>
+				</form>
+			</div>
+		</nav>
+	</header>
+
+	<main class="container py-5 contenido-registro">
+		<h1 class="h3 fw-semibold text-devv mb-1">Registrar barbero</h1>
+		<p class="text-secondary mb-4">Ingrese los datos del barbero. Los campos con * son obligatorios.</p>
+
+		<div id="mensaje" class="alert d-none" role="alert"></div>
+		
+		
+				<form id="formularioBarbero" class="card card-body p-4" novalidate>
+			<section class="mb-4">
+				<h2 class="titulo-seccion mb-3">Identificación</h2>
+				<div class="row g-3">
+					<div class="col-md-6">
+						
+						<label for="tipoIdentificacion" class="form-label">Tipo de identificación *</label>
+						<select id="tipoIdentificacion" class="form-select">
+							<option value="">Seleccione…</option>
+						</select>
+						<div id="tipoIdentificacionError" class="invalid-feedback"></div>
+					</div>
+					<div class="col-md-6">
+						<label for="numeroIdentificacion" class="form-label">Número de identificación *</label>
+						<input id="numeroIdentificacion" type="text" class="form-control" maxlength="20" placeholder="Ej: 1036789456" autocomplete="off">
+						<div class="form-text">Entre 5 y 20 caracteres. Solo el pasaporte admite letras.</div>
+						<div id="numeroIdentificacionError" class="invalid-feedback"></div>
+					</div>
+				</div>
+			</section>
+			
+			
+						<section class="mb-4">
+				<h2 class="titulo-seccion mb-3">Nombre</h2>
+				<div class="row g-3">
+					<div class="col-md-6">
+						<label for="primerNombre" class="form-label">Primer nombre *</label>
+						<input id="primerNombre" type="text" class="form-control" maxlength="30" placeholder="Ej: Juan" autocomplete="off">
+						<div id="primerNombreError" class="invalid-feedback"></div>
+					</div>
+					<div class="col-md-6">
+						<label for="segundoNombre" class="form-label">Segundo nombre</label>
+						<input id="segundoNombre" type="text" class="form-control" maxlength="30" placeholder="Opcional" autocomplete="off">
+						<div id="segundoNombreError" class="invalid-feedback"></div>
+					</div>
+					<div class="col-md-6">
+						<label for="primerApellido" class="form-label">Primer apellido *</label>
+						<input id="primerApellido" type="text" class="form-control" maxlength="30" placeholder="Ej: Pérez" autocomplete="off">
+						<div id="primerApellidoError" class="invalid-feedback"></div>
+					</div>
+					<div class="col-md-6">
+						<label for="segundoApellido" class="form-label">Segundo apellido</label>
+						<input id="segundoApellido" type="text" class="form-control" maxlength="30" placeholder="Opcional" autocomplete="off">
+						<div id="segundoApellidoError" class="invalid-feedback"></div>
+					</div>
+				</div>
+				<div class="form-text">Cada campo lleva un solo nombre o apellido, de 2 a 30 letras.</div>
+			</section>
+
+			<section class="mb-4">
+				<h2 class="titulo-seccion mb-3">Contacto</h2>
+				<div class="row g-3">
+					<div class="col-md-6">
+						<label for="numeroTelefono" class="form-label">Número de teléfono (WhatsApp) *</label>
+						<div class="input-group has-validation">
+							<select id="indicativoPais" class="form-select selector-indicativo" aria-label="Indicativo de país">
+								<option value="">Indicativo</option>
+							</select>
+							<input id="numeroTelefono" type="tel" class="form-control" maxlength="14" inputmode="numeric" placeholder="Ej: 3001234567" autocomplete="off">
+							<div id="indicativoPaisError" class="invalid-feedback"></div>
+							<div id="numeroTelefonoError" class="invalid-feedback"></div>
+						</div>
+						<div class="form-text">Sin el indicativo, de 7 a 14 dígitos.</div>
+					</div>
+					<div class="col-md-6">
+						<label for="correoElectronico" class="form-label">Correo electrónico *</label>
+						<input id="correoElectronico" type="email" class="form-control" maxlength="100" placeholder="nombre@dominio.com" autocomplete="off">
+						<div id="correoElectronicoError" class="invalid-feedback"></div>
+					</div>
+				</div>
+			</section>
+
+			<div class="d-flex flex-wrap justify-content-end gap-2">
+				<button type="reset" class="btn btn-outline-devv px-4">Limpiar</button>
+				<button id="botonRegistrar" type="submit" class="btn btn-devv px-4">Registrar barbero</button>
+			</div>
+			
+			
+			
+			
+			
+			
+		</form>
+		
+	</main>
+
+	<footer class="bg-devv text-devv-suave text-center py-3 small">© 2026 devv_style</footer>
+	<script th:src="@{/js/registrar-barbero.js}" src="/js/registrar-barbero.js"></script>
+</body>
+</html>
